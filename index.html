@@ -95,8 +95,8 @@
           </div>
 
           <!-- <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
+            <div class="publication-links"> -->
+              <!-- PDF Link.
               <span class="link-block">
                 <a href="https://arxiv.org/pdf/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
@@ -116,7 +116,7 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -126,7 +126,7 @@
                 </a>
               </span>
               <!-- Code Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -134,9 +134,9 @@
                   </span>
                   <span>Code</span>
                   </a>
-              </span>
+              </span> -->
               <!-- Dataset Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -144,16 +144,16 @@
                   </span>
                   <span>Data</span>
                   </a>
-            </div>
+            </div> --> -->
 
-          </div> -->
+          <!-- </div> --> -->
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -165,7 +165,7 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <!-- <section class="hero is-light is-small">
@@ -234,8 +234,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-          This research presents a comprehensive framework for Affine Transformation-based Perfectly Undetectable Attacks (ATPA) on multi-agent formation control systems. We systematically extend prior single-agent ATPA to multi-agent systems and establish a fundamental distinction between two attack strategies: Individual Agent Dynamics Matching (IADM) and Closed-Loop Matching (CLM). The key contribution is clarifying that IADM attacks with condition $\bm{S}_x\bm{S}_u = \bm{I}$ can be applied to each agent independently without knowledge of formation control structure or other agents' dynamics, while CLM attacks with condition $(\bm{S}_x\bm{S}_u - \bm{I})\bm{L} = \bm{0}$ (where $\bm{S}_x\bm{S}_u \neq \bm{I}$) require explicit knowledge of the Laplacian matrix and coordinated design across multiple agents. Both static and time-varying variants are presented for each attack class. The framework is validated through simulations and experimental implementation on the Robotarium platform, demonstrating that formation geometry can be arbitrarily distorted while controllers observe nominal convergence. Results reveal that IADM provides simplicity and decoupled agent-level implementation, while CLM enables more sophisticated attacks exploiting formation consensus structure at the cost of requiring graph topology knowledge.
-          </p>
+            This research presents a comprehensive framework for Affine Transformation-based Perfectly Undetectable Attacks (ATPA) on multi-agent consensus formation control systems. A fundamental contribution is the exploitation of uncontrollable modes inherent in consensus formation control, where the null space of the graph Laplacian contains the all-ones vector, creating new attack vulnerabilities absent in single-agent systems. This uncontrollable mode corresponds to the center-of-mass drift that consensus protocols cannot control, enabling attackers to manipulate formation geometry while preserving relative positioning errors observed by controllers. The framework systematically extends prior single-agent ATPA to multi-agent systems and establishes a distinction between two attack strategies: Individual Agent Dynamics Matching (IADM) and Closed-Loop Matching (CLM). IADM attacks each agent independently without knowledge of formation control structure or other agents' dynamics. CLM attacks allow non-identity attack matrix products while ensuring their deviation from identity lies in the null space of the Laplacian matrix. Both constant and time-varying parameter variants are developed for each attack class. The framework is validated through simulations and experimental implementation on the Robotarium platform, demonstrating that formation geometry can be arbitrarily distorted while controllers observe nominal convergence behavior.          </p>
         </div>
       </div>
     </div>
@@ -260,6 +259,39 @@
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
+
+      <div class="column">
+        <h2 class="title is-3">Nominal Case (No Attack)</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+            Formation control under no ATPA attack.
+            </p>
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/robotarium-4-CLM-scale-TV.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="columns is-centered">
+
+        <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Nominal Case (No Attack)</h2>
+          <p>
+            Formation control under no ATPA attack.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/robotarium-4-IADM.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
 
       <div class="column">
         <div class="content">
@@ -293,26 +325,7 @@
 
     </div>
 
-    <div class="columns is-centered">
 
-      <div class="column">
-        <h2 class="title is-3">Closed Loop Matching Time-Variant</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              CLM allows agents in a graph topology to be attacked in a coordinated manner, given knowledge
-              of the formation structure.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/robotarium-4-CLM-scale-TV.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
 
     <!-- Animation. -->
     <!-- <div class="columns is-centered">
